@@ -11,7 +11,10 @@ while True:
               Arch: yay update, pacman update, pacman update database
               Debian: apt update, apt upgrade
               Fedora: dnf update, dnf upgrade
-              OpenSuSE: zypper update""")
+              OpenSuSE: zypper update
+              Nutyx: cards update
+              Void: xbps update
+              Alpine: apk upgrade""")
     elif cmd == "yay update":
         os.system("yay -Syu") # Upgrade installed packages
     elif cmd == "pacman update":
@@ -28,6 +31,12 @@ while True:
         os.system("sudo dnf upgrade")
     elif cmd == "zypper update": # Update all the packages using the zypper update command
         os.system("sudo zypper update")
+    elif cmd == "cards update": # The command cards sync will check the latest status of the available updates for your system.
+        os.system("sudo cards sync")
+    elif cmd == "xbps update": # Use xbps-install to update Void Linux
+        os.system("sudo xbps-install -Su")
+    elif cmd == "apk upgrade": # Upgrade all your Alpine Linux packages
+        os.system("sudo apk upgrade --available && sync")
     elif cmd == "exit":
         sys.exit()
     else:
