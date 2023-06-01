@@ -7,3 +7,6 @@ more will be added.
 
 Updating Packages!
 Update System!
+
+# UPDATE:
+          Added commands for Alpine, Void and Nutyx!
